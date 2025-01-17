@@ -23,7 +23,32 @@
 
 # Week-1
 [Top](#TOP)
-## 2025-01-13
+## 2025-01-16
+  - JavaScript is an event-driven programming language.
+  - Write JavaScript code in a different section in the HTML page code usually in a script section <script>
+  - We can put these JavaScript function in a '.js' file and embed these function in an HTML file with 
+  ```js
+  /* firstJsScript.js */
+  function myFirstJsFunction(){ document.getElementById('example1').innerHTML = "Hello JavaScript!"; }
+  ```
+
+  ```html
+  <!--- firstHtmlDoc.html --->
+    
+  <html>
+    <body>
+      <!--- Embedding JS Script files should be done inside containers --->
+      <script src="firstJsScript.js"></script>
+      <h2>What can JavaScript do?</h2>
+      <p id="demo">JavaScript can change HTML content.</p>
+
+      <!-- There are mouse-over, and mouse-click and many other events which can be used --->
+      <button type="button" onclick=myFirstJsFunction()>Click Me!</button>
+      
+    </body>
+  </html>
+  ```
+## 2025-01-14
   - Make sure all fields come with an ID, and name.
   ```html
   <!DOCTYPE html>
