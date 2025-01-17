@@ -10,6 +10,7 @@
   <style>
     .content { display:none; }
     .active { display:block; }
+    .slideshow01 { display:none; }
 
     * {
       box-sizing: border-box;
@@ -99,8 +100,41 @@
       height: auto;
     }
   </style>
+
+  <script>
+    // This is the script to set pages to active or inactive
+    function showPage(pageId, tabId) {
+      // Hide all content sections
+      var contents = document.querySelectorAll('.content');
+      contents.forEach(content => content.classList.remove('active'));
+
+      // Remove active class from all tabs 
+      var tabs = document.querySelectorAll('ul li'); 
+      tabs.forEach(tab => tab.classList.remove('active'));
+
+      // Show the selected content
+      document.getElementById(pageId).classList.add('active');
+
+      // Add active class to the selected tab
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    // This is the slideshow function for homepage
+    function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slideshow01");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 1000); // Change image every 1 seconds
+  }
+  </script>
 </head>
 
+<body>
 <!--- This is the Top Toolbar -->
 <ul>
   <li id="tab1"><a href="#" onclick="showPage('homepage', 'tab1')">Homepage</a></li>
@@ -125,6 +159,16 @@
     here. We have a wide selection of movies and TV shows for you to 
     choose from.
   </p>
+  <div class="homepage-slideshow" style="max-width:500px">
+    <img class="slideshow01" src="logo.png" alt="Spencer's Movies Logo" style="width:40%">
+    <img class="slideshow01" src="logo.png" alt="Spencer's Movies Logo" style="width:50%">
+    <img class="slideshow01" src="logo.png" alt="Spencer's Movies Logo" style="width:60%">
+    
+  </div>
+  <script>
+    var myIndex=0;
+    carousel();
+  </script>
 </div>
 
 <!--- This is Page 2, the Gallery Page -->
@@ -172,29 +216,10 @@
   </form>
 </div>
 
-<!--- This is the script to set pages to active -->
-<script>
-  function showPage(pageId, tabId) {
-    // Hide all content sections
-    var contents = document.querySelectorAll('.content');
-    contents.forEach(content => content.classList.remove('active'));
-
-    // Remove active class from all tabs 
-    var tabs = document.querySelectorAll('ul li'); 
-    tabs.forEach(tab => tab.classList.remove('active'));
-
-    // Show the selected content
-    document.getElementById(pageId).classList.add('active');
-
-    // Add active class to the selected tab
-    document.getElementById(tabId).classList.add('active');
-  }
-</script>
-
 <!--- This is the Footer -->
 <footer>
     <p>sowens23@alaska.edu</p>
     <p>&copy; 2025 Spencer's Movies</p>
 </footer>
-
+</body>
 </html>
