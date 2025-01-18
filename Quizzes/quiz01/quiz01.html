@@ -1,3 +1,10 @@
+<!-- Name: Spencer Bayinsger -->
+<!-- Date: 2025-01-17 -->
+<!-- Filename: quiz01.js -->
+<!-- Purpose: Primary website html page -->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,169 +14,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet">
   <link rel="icon" href="logo.png" type="image/png">
-  <style>
-    .content { display:none; }
-    .active { display:block; }
-    .slideshow01 { display:none; }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    ul {
-      list-style-type: none;
-      font-size: 17px;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #fff9ee;
-      border: 2px solid grey;
-    }
-
-    li {
-      float: left;
-    }
-
-    li a {
-      display: block;
-      color: #8e564d;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-    li a:hover:not(.active) {
-      color: #a0bbd9;
-    }
-
-    ul li.active a {
-      color: #a0bbd9;
-      font-weight: bold;
-    }
-
-    body {
-      background-color: #e3e3e3;
-    }
-
-    header {
-      background-color: #dedede;
-      padding: 20px;
-      text-align: center;
-      font-size: 30px;
-      color: black;
-      /* display: flex; */
-      align-items: center;
-      justify-content: center;
-    }
-
-    div {
-      /* font-family: "Arial", Helvetica, sans-serif; */
-      font-family: "Domine", serif;
-      background-color: #fff9ee;
-      padding: 10px;
-      text-align: center;
-      font-size: 20px;
-      color: #8e564d;
-      border: 4px solid grey;
-    }
-
-    footer {
-      background-color: #e3e3e3;
-      padding: 10px;
-      text-align: center;
-      font-size: 12px;
-      color: #8e564d;
-    }
-
-    /* 
-      A container that uses CSS Grid to place 5 columns per row, 
-      with centered content and some spacing between items.
-    */
-
-    .image-container {
-      display: grid;
-      grid-template-columns: repeat(5, auto); /* 5 images per row */
-      justify-content: center;                /* center columns horizontally */
-      gap: 5px;                               /* space between images */
-      margin-top: 50px;                       /* optional top margin */
-    }
-
-    /* Fixed width/height for each image (modify as needed) */
-    .image-container img {
-      width: 100%;
-      height: auto;
-    }
-  </style>
-
-  <script>
-    // This is the script to set pages to active or inactive
-    function showPage(pageId, tabId) {
-      // Hide all content sections
-      var contents = document.querySelectorAll('.content');
-      contents.forEach(content => content.classList.remove('active'));
-
-      // Remove active class from all tabs 
-      var tabs = document.querySelectorAll('ul li'); 
-      tabs.forEach(tab => tab.classList.remove('active'));
-
-      // Show the selected content
-      document.getElementById(pageId).classList.add('active');
-
-      // Add active class to the selected tab
-      document.getElementById(tabId).classList.add('active');
-    }
-
-    // This is the slideshow function for homepage
-    function carousel() {
-    var i;
-    var x = document.getElementsByClassName("slideshow01");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 1000); // Change image every 1 seconds
-  }
-  </script>
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
 
+
 <body>
-<!--- This is the Top Toolbar -->
+<!--------------------------------->
+<!--- Header and Navigation Bar --->
+<!--------------------------------->
+
+<!-------- This is the Nav Bar -->
 <ul>
   <li id="tab1"><a href="#" onclick="showPage('homepage', 'tab1')">Homepage</a></li>
   <li id="tab2"><a href="#" onclick="showPage('gallery', 'tab2')">Gallery</a></li>
   <li id="tab3" style="float:right"><a href="#" onclick="showPage('login', 'tab3')">Login</a></li>
 </ul>
 
-<!--- This is the Header -->
+<!--------- This is the Header -->
 <header>
   <img src="logo.png" alt="Spencer's Movies Logo" width="300" height=auto>
   <h1><u><b>Spencer's Movies</b></u></h1>
 </header>
 
+
+
+<!------------------------------->
+<!-------- Website Pages -------->
+<!------------------------------->
+
 <!--- This is Page 1, the Home Page -->
-<div id="homepage" class="content active">
-  <h2>Dedicated to delivering high quality videos to you.</h2>
-  <p>
-    Welcome to Spencer's videos, where we will provide you with 
-    the best movies and TV shows around.
-    <br><br>
-    You will be able to watch all of your favorite movies and TV shows 
-    here. We have a wide selection of movies and TV shows for you to 
-    choose from.
-  </p>
-  <div class="homepage-slideshow" style="max-width:500px">
-    <img class="slideshow01" src="logo.png" alt="Spencer's Movies Logo" style="width:40%">
-    <img class="slideshow01" src="logo.png" alt="Spencer's Movies Logo" style="width:50%">
-    <img class="slideshow01" src="logo.png" alt="Spencer's Movies Logo" style="width:60%">
-    
-  </div>
-  <script>
-    var myIndex=0;
-    carousel();
-  </script>
+<div id="homepage" class="homepage-slideshow content">
+  <!-- Slide 1 -->
+  <figure class="slideshow-slide" id="slide1">
+    <!-- Adjust the image width in CSS rather than inline -->
+    <img src="logo.png" alt="Spencer's Movies Logo" />
+    <figcaption>(Image 1)</figcaption>
+  </figure>
+
+  <!-- Slide 2 -->
+  <figure class="slideshow-slide" id="slide2">
+    <img src="logo.png" alt="Spencer's Movies Logo" />
+    <figcaption>(Image 2)</figcaption>
+  </figure>
+
+  <!-- Slide 3 -->
+  <figure class="slideshow-slide" id="slide3">
+    <img src="logo.png" alt="Spencer's Movies Logo" />
+    <figcaption>(Image 3)</figcaption>
+  </figure>
 </div>
+
+
 
 <!--- This is Page 2, the Gallery Page -->
 <div id="gallery" class="content">
@@ -216,10 +111,18 @@
   </form>
 </div>
 
-<!--- This is the Footer -->
+
+<!------------------------------->
+<!----------- Footer ------------>
+<!------------------------------->
+
+<!--------- This is the Footer -->
 <footer>
-    <p>sowens23@alaska.edu</p>
-    <p>&copy; 2025 Spencer's Movies</p>
+  <p>sowens23@alaska.edu</p>
+  <p>&copy; 2025 Spencer's Movies</p>
 </footer>
+
+
+<script src="scripts.js"></script>
 </body>
 </html>
