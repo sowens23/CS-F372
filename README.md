@@ -21,6 +21,23 @@
   | --- | --- | --- |
   | [Week-1](#Week-1) | [HW00](https://github.com/sowens23/CS-F301/tree/main/homework) | |
 
+# Week-2
+[Top](#TOP)
+## 2025-01-21
+  - Front End (Client) has a few layers
+    - Browser (Chrome)
+    - Browser Engine (Chromium)
+    - Runtime (Javascript)
+    - Renderer (HTML & CSS)
+  - Backend (Server)
+    - The Full Stack
+      - MERN stack (MondoDB, Express, React, NodeJS)
+      - NodeJS is the top layer that faces the frontend
+      - MongoDB is the bottom layer that manages data
+      - React and Express are middle layer that add more easy-to-use functionalities to NodeJS
+    - Rust, and Python offer effective middle layer languages for web development
+  - 
+
 # Week-1
 [Top](#TOP)
 ## 2025-01-16
