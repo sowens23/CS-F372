@@ -1,0 +1,151 @@
+/* Name: Spencer Bayinsger */
+/* Date: 2025-01-17 */
+/* Filename: stylesheet.css */
+/* Purpose: Styling Sheet for quiz01.html */
+
+/* --------------------------------------------------- */
+/* ----- Set up the default display for the tabs ----- */
+/* --------------------------------------------------- */
+
+.content { display:none; }
+.active { display:block; }
+.slideshow-slide { display:none; }
+
+
+
+/* -------------------------------- */
+/* ---- Navigation Bar Styling ---- */
+/* -------------------------------- */
+
+ul {
+  list-style-type: none;
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff9ee;
+  border: 2px solid grey;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #8e564d;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  color: #a0bbd9;
+}
+
+ul li.active a {
+  color: #a0bbd9;
+  font-weight: bold;
+}
+
+
+
+/* -------------------------------- */
+/* General Styling for the Web Page */
+/* -------------------------------- */
+
+body {
+  background-color: #dedede;
+}
+
+header {
+  background-color: #dedede;
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+}
+
+div {
+  /* font-family: "Arial", Helvetica, sans-serif; */
+  font-family: "Domine", serif;
+  background-color: #fff9ee;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  color: #8e564d;
+}
+
+footer {
+  background-color: #fff9ee;
+  padding: 1px;
+  text-align: center;
+  font-size: 12px;
+  color: #8e564d;
+  border: 2px solid grey;
+}
+
+.content {
+  padding: 20px;
+}
+
+
+
+/* ------------------------------------------ */
+/* Gallery Tabulated Images Container Styling */
+/* ------------------------------------------ */
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(5, auto); /* 5 images per row */
+  justify-content: center;                /* center columns horizontally */
+  gap: 5px;                               /* space between images */
+  margin-top: 50px;                       /* optional top margin */
+}
+
+/* Fixed width/height for each image (modify as needed) */
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* ------------------------------------ */
+/* Homepage Slideshow Container Styling */
+/* ------------------------------------ */
+
+/* Centers the slideshow container */
+.homepage-slideshow {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+  background-color: #dedede;
+  display: inline-block;
+}
+
+.slideshow-slide {
+  display: none;
+  position: static;
+}
+
+/* The 'active' class can be toggled to show a particular slide */
+.slideshow-slide.active {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Style the images and center them */
+.slideshow-slide img {
+  max-width: 30%;
+  height: auto;
+}
+
+/* Figcaption styling */
+.slideshow-slide figcaption {
+  margin-top: 10px;
+  color: #8e564d;
+  font-style: italic;
+}
