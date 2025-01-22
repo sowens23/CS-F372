@@ -91,7 +91,9 @@ footer {
   padding: 20px;
 }
 
-
+.content.active {
+  display: block;
+}
 
 /* ------------------------------------------ */
 /* Gallery Tabulated Images Container Styling */

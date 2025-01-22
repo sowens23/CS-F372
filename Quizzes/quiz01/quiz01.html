@@ -32,7 +32,7 @@
 
 <!--------- This is the Header -->
 <header>
-  <img src="logo.png" alt="Spencer's Movies Logo" width="300" height=auto>
+  <img src="logo.png" alt="Spencer's Movies Logo" width="250" height=auto>
   <h1><u><b>Spencer's Movies</b></u></h1>
 </header>
 
@@ -43,23 +43,38 @@
 <!------------------------------->
 
 <!--- This is Page 1, the Home Page -->
-<div id="homepage" class="homepage-slideshow content">
+<div id="homepage" class="content" class="homepage-slideshow">
+  <h3>
+    Welcome to Spencer's Movies! We are a movie review website that provides 
+    the latest information on the best movies in theaters and on streaming services!
+  </h3>
+  <p style="font-size: 12px">
+    Spencers Movies is a fresh streaming platform offering blockbusters, classics, 
+    and indie gems. Its clean interface makes it simple to explore genres, 
+    create watchlists, and enjoy high-quality streaming.
+  </p>
+  <p style="font-size: 12px">
+    What sets Spencers Movies apart is its vibrant community. Subscribers join 
+    monthly watch parties, dive into behind-the-scenes features, and share film 
+    insights—all in one welcoming, user-friendly environment.
+  </p>
+
   <!-- Slide 1 -->
-  <figure class="slideshow-slide" id="slide1">
+  <figure class="slideshow-slide active" id="slide1">
     <!-- Adjust the image width in CSS rather than inline -->
-    <img src="logo.png" alt="Spencer's Movies Logo" />
+    <img src="logo.png" alt="Spencer's Movies Logo" width="150"/>
     <figcaption>(Image 1)</figcaption>
   </figure>
 
   <!-- Slide 2 -->
   <figure class="slideshow-slide" id="slide2">
-    <img src="logo.png" alt="Spencer's Movies Logo" />
+    <img src="logo.png" alt="Spencer's Movies Logo" width="175"/>
     <figcaption>(Image 2)</figcaption>
   </figure>
 
   <!-- Slide 3 -->
   <figure class="slideshow-slide" id="slide3">
-    <img src="logo.png" alt="Spencer's Movies Logo" />
+    <img src="logo.png" alt="Spencer's Movies Logo" width="200"/>
     <figcaption>(Image 3)</figcaption>
   </figure>
 </div>
@@ -101,14 +116,19 @@
 
 <!--- This is Page 3, the Login Page -->
 <div id="login" class="content">
-  <h3><u>Login below</u></h3>
-  <form>
+  <form id="loginForm">
+    <h3><u>Login below</u></h3>
     <label>Username:</label><br>
     <input type="text" id="username" name="username"><br>
     <label>Password:</label><br>
     <input type="password" id="password" name="password"><br><br>
     <input type="submit" value="Submit">
   </form>
+
+  <!-- Logged in message is hidden by default -->
+  <p id="loggedInMessage" style="display: none;">
+    You are now logged in!
+  </p>
 </div>
 
 
