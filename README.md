@@ -16,7 +16,13 @@
 ### References
   - [HTML Tutorials](https://www.w3schools.com/html/default.asp)
 
-# Class Notes and Assignments
+### Ultimate Syntax Rules
+  - Make sure all fields have an ID and a name.
+  - Make sure JavaScript scripts are in it's own .JS file.
+  - Make sure all CSS styling is in a .css file.
+  - Any JS/Node functions should be stored in a variable for easy reference (??)
+
+### Class Notes and Assignments
   | Weekly Notes | Assignments | Other Notes |
   | --- | --- | --- |
   | [Week-1](#Week-1) | [HW00](https://github.com/sowens23/CS-F301/tree/main/homework) | |
@@ -36,7 +42,27 @@
       - MongoDB is the bottom layer that manages data
       - React and Express are middle layer that add more easy-to-use functionalities to NodeJS
     - Rust, and Python offer effective middle layer languages for web development
-  - 
+  - There are multiple ways to integrate, call, or import other .js files. This is necessary for object oriented programming in javascript.
+  - Standard file segregation includes a main.js, header.js, and additional files which maintain the source code of your functions and classes.
+  - There are many node.js modules which you can access and utilize to improve your own packages.
+
+  ```js
+  <!-- First Node.JS file -->
+
+  <!-- Here we will declare variables and print them -->
+  var a = 10;
+  console.log(a);
+  var name = "John";
+  greetFunction(name);
+
+  x = function greetFunction(name) {
+    console.log("Hello " + name);
+  }
+
+  <!-- Here will will investigate file access -->
+  <!-- This is only server side, so there is no client file system access -->
+  require("./module.js")
+  ```
 
 # Week-1
 [Top](#TOP)
