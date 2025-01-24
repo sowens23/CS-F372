@@ -3,20 +3,17 @@
 /* Filename: stylesheet.css */
 /* Purpose: Styling Sheet for quiz01.html */
 
-/* --------------------------------------------------- */
-/* ----- Set up the default display for the tabs ----- */
-/* --------------------------------------------------- */
-
-.content { display:none; }
+/* --------------------------------------------- */
+/* ----- Set up the default global display ----- */
+/* --------------------------------------------- */
+.content { display:none; padding: 20px; }
 .active { display:block; }
 .slideshow-slide { display:none; }
-
-
+.content.active { display: block; }
 
 /* -------------------------------- */
 /* ---- Navigation Bar Styling ---- */
 /* -------------------------------- */
-
 ul {
   list-style-type: none;
   font-size: 17px;
@@ -48,19 +45,11 @@ ul li.active a {
   font-weight: bold;
 }
 
-
-
-/* -------------------------------- */
-/* General Styling for the Web Page */
-/* -------------------------------- */
-
-body {
-  background-color: #dedede;
-}
-
+/* -------------------------------------------- */
+/* GLOBAL CLASS FORMATTING HEADER, BODY, FOOTER */
+/* -------------------------------------------- */
 header {
-  background-color: #dedede;
-  padding: 20px;
+  order: 0;
   text-align: center;
   font-size: 30px;
   color: black;
@@ -68,17 +57,22 @@ header {
   justify-content: center;
 }
 
-div {
-  /* font-family: "Arial", Helvetica, sans-serif; */
+body {
+  order: 1;
+  display: flex;
+  font-size: 12px;
+  margin: 0;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #dedede;
   font-family: "Domine", serif;
-  background-color: #fff9ee;
-  padding: 10px;
   text-align: center;
-  font-size: 20px;
   color: #8e564d;
+  padding: 10px;
 }
 
 footer {
+  order: 2;
   background-color: #fff9ee;
   padding: 1px;
   text-align: center;
@@ -87,28 +81,21 @@ footer {
   border: 2px solid grey;
 }
 
-.content {
-  padding: 20px;
-}
-
-.content.active {
-  display: block;
-}
-
 /* ------------------------------------------ */
 /* Gallery Tabulated Images Container Styling */
 /* ------------------------------------------ */
-
 .image-container {
+  border: 10px solid #fff9ee;
   display: grid;
-  grid-template-columns: repeat(5, auto); /* 5 images per row */
-  justify-content: center;                /* center columns horizontally */
-  gap: 5px;                               /* space between images */
-  margin-top: 50px;                       /* optional top margin */
+  background-color: #fff9ee;
+  grid-template-columns: repeat(5, auto);
+  justify-content: center;
+  gap: 5px;
+  margin-top: 50px;
 }
 
-/* Fixed width/height for each image (modify as needed) */
 .image-container img {
+  border: 2px solid black;
   width: 100%;
   height: auto;
 }
@@ -118,14 +105,12 @@ footer {
 /* ------------------------------------ */
 /* Homepage Slideshow Container Styling */
 /* ------------------------------------ */
-
-/* Centers the slideshow container */
-.homepage-slideshow {
+.slideshow-container {
   margin: 0 auto;
   text-align: center;
   padding: 0;
-  background-color: #dedede;
   display: inline-block;
+  position: relative;
 }
 
 .slideshow-slide {
@@ -133,21 +118,39 @@ footer {
   position: static;
 }
 
-/* The 'active' class can be toggled to show a particular slide */
 .slideshow-slide.active {
   display: block;
   margin: 0 auto;
 }
 
-/* Style the images and center them */
 .slideshow-slide img {
-  max-width: 30%;
-  height: auto;
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: fill;
+  margin: 0 auto;
 }
 
-/* Figcaption styling */
-.slideshow-slide figcaption {
-  margin-top: 10px;
-  color: #8e564d;
-  font-style: italic;
+.slideshow-overlay {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.slideshow-container:hover .slideshow-overlay {
+  opacity: .95;
+}
+
+.slideshow-hovertext {
+  background: #fff9ee;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block; 
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
 }

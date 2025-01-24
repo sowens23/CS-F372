@@ -1,0 +1,11 @@
+# Ignore everything
+*
+
+# Do not ignore .gitignore itself
+!.gitignore
+
+# Un-ignore the public folder and all its contents
+!quizzes/
+!quizzes/quiz01/
+!quizzes/quiz01/public/
+!quizzes/quiz01/public/**

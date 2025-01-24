@@ -1,0 +1,165 @@
+<!-- Name: Spencer Bayinsger -->
+<!-- Date: 2025-01-17 -->
+<!-- Filename: quiz01.js -->
+<!-- Purpose: Primary website html page -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Spencer's Movies</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<!--------------------------------->
+<!--- Header and Navigation Bar --->
+<!--------------------------------->
+
+<!-------- This is the Nav Bar -->
+<ul>
+  <li id="tab1" class="active"><a href="#" onclick="showPage('homepage', 'tab1')">Homepage</a></li>
+  <li id="tab2"><a href="#" onclick="showPage('gallery', 'tab2')">Gallery</a></li>
+  <li id="tab3" style="float:right"><a href="#" onclick="showPage('login', 'tab3')">Login</a></li>
+</ul>
+
+<!--------- This is the Header -->
+<header>
+  <img src="logo.png" alt="Spencer's Movies Logo" width="250" height=auto>
+  <h1><u><b>Spencer's Movies</b></u></h1>
+</header>
+
+<!--------- This is the Footer -->
+<footer>
+  <p>sowens23@alaska.edu</p>
+  <p>&copy; 2025 Spencer's Movies</p>
+</footer>
+
+<!------------------------------->
+<!-------- Website Pages -------->
+<!------------------------------->
+<body>
+
+<!--- This is Page 1, the Home Page -->
+<div id="homepage" class="content active">
+  <h1>
+    Welcome to Spencer's Movies! We are a movie review website that provides 
+    the latest information on the best movies in theaters and on streaming services!
+  </h1>
+
+  <div class="slideshow-container">
+    <!-- Slide 1 -->
+    <figure class="slideshow-slide active" id="slide1">
+      <!-- Adjust the image width in CSS rather than inline -->
+      <img src="homepageslideshow1.png" alt="Spencer's Movies Logo" width="150"/>
+      <div class="slideshow-overlay">
+        <div class="slideshow-hovertext">Image 1</div>
+      </div>
+    </figure>
+
+    <!-- Slide 2 -->
+    <figure class="slideshow-slide" id="slide2">
+      <img src="homepageslideshow2.png" alt="Spencer's Movies Logo" width="150"/>
+      <div class="slideshow-overlay">
+        <div class="slideshow-hovertext">Image 2</div>
+      </div>
+    </figure>
+
+    <!-- Slide 3 -->
+    <figure class="slideshow-slide" id="slide3">
+      <img src="homepageslideshow3.png" alt="Spencer's Movies Logo" width="150"/>
+      <div class="slideshow-overlay">
+        <div class="slideshow-hovertext">Image 3</div>
+      </div>
+    </figure>
+
+    <!-- Slide 4 -->
+    <figure class="slideshow-slide" id="slide4">
+      <img src="homepageslideshow4.png" alt="Spencer's Movies Logo" width="150"/>
+      <div class="slideshow-overlay">
+        <div class="slideshow-hovertext">Image 4</div>
+      </div>
+    </figure>
+  </div>
+
+  <p>
+    Spencers Movies is a fresh streaming platform offering blockbusters, classics, 
+    and indie gems. Its clean interface makes it simple to explore genres, 
+    create watchlists, and enjoy high-quality streaming.
+  </p>
+  <p>
+    What sets Spencers Movies apart is its vibrant community. Subscribers join 
+    monthly watch parties, dive into behind-the-scenes features, and share film 
+    insights—all in one welcoming, user-friendly environment.
+  </p>
+
+</div>
+
+
+
+<!--- This is Page 2, the Gallery Page -->
+<div id="gallery" class="content">
+  <h1>Gallery</h1>
+  <p>Please see images below</p>
+
+  <div class="image-container">
+    <!-- Repeat this image 20 times -->
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 1">
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 2">
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 3">
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 4">
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 5">
+
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 6">
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 7">
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 8">
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 9">
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 10">
+
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 11">
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 12">
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 13">
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 14">
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 15">
+
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 16">
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 17">
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 18">
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 19">
+    <img src="logo.png" alt="Spencer's Movies Logo" title="Image 20">
+  </div>
+</div>
+
+<!--- This is Page 3, the Login Page -->
+<div id="login" class="content">
+  <form id="loginForm">
+    <h3><u>Login below</u></h3>
+    <label>Username:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <label>Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+    <input type="submit" id="Login" value="Submit">
+  </form>
+
+  <!-- Error message for invalid username/password -->
+  <div id="errorMessage" style="display: none; color: red;">
+    <p>Invalid username (a-z/A-Z)</p>
+    <p>or</p>
+    <p>Invalid password</p>
+    <p>Please try again.</p>
+    <button type="button" id="resetLogin">OK</button>
+  </div>
+
+  <!-- Logged in message is hidden by default -->
+  <p id="loggedInMessage" style="display: none;">
+    You are now logged in!
+  </p>
+
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>

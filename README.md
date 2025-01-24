@@ -21,6 +21,7 @@
   - Make sure JavaScript scripts are in it's own .JS file.
   - Make sure all CSS styling is in a .css file.
   - Any JS/Node functions should be stored in a variable for easy reference (??)
+  - 137.229.25.190 CS Server Address
 
 ### Class Notes and Assignments
   | Weekly Notes | Assignments | Other Notes |

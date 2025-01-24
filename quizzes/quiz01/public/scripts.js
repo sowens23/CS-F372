@@ -3,12 +3,9 @@
 // Filename: scripts.js
 // Purpose: Scripts for quiz01.html
 
-
-
 // -------------------------------------------------------------
 // This is the script to set website pages to active or inactive
 // -------------------------------------------------------------
-
 function showPage(pageId, tabId) {
   // Hide all content sections
   var contents = document.querySelectorAll('.content');
@@ -24,8 +21,6 @@ function showPage(pageId, tabId) {
   // Add active class to the selected tab
   document.getElementById(tabId).classList.add('active');
 }
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -44,26 +39,42 @@ document.addEventListener('DOMContentLoaded', () => {
   // Show the first slide initially
   showSlide(currentSlideIndex);
   
-  // Automatically rotate every 3 seconds
+  // Automatically rotate every 4 seconds
   setInterval(() => {
     currentSlideIndex = (currentSlideIndex + 1) % slides.length;
     showSlide(currentSlideIndex);
-  }, 3000);
+  }, 4000);
 
 
-  // ----------------------------------------------
-  // Display "Logged in" message after login submit
-  // ----------------------------------------------
+  // ----------------
+  // Login Page Logic
+  // ----------------
   const loginForm = document.getElementById('loginForm');
   const loggedInMessage = document.getElementById('loggedInMessage');
-  loginForm.addEventListener('submit', (event) => {
-    // Prevent the form from redirecting (optional; remove if you want a real POST)
-    event.preventDefault();
 
-    // Assuming the form is valid, hide the form and show the message
-    // Hide the login form
-    loginForm.style.display = 'none';
-    // Show the "logged in" message
-    loggedInMessage.style.display = 'block';
+  loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const usernameInput = document.getElementById('username').value;
+    const lettersOnlyPattern = /^[A-Za-z]+$/;
+    const clickedButton = event.submitter.id;
+
+    if(clickedButton === 'Login') {
+      if(!lettersOnlyPattern.test(usernameInput)) {
+        loginForm.style.display = 'none';
+        errorMessage.style.display = 'block';
+        return false;
+      } 
+      loginForm.style.display = 'none';
+      loggedInMessage.style.display = 'block';
+    }
+
   });
+
+  resetLogin.addEventListener('click', () => {
+    username.value = '';
+    password.value = '';
+    loginForm.style.display = 'block';
+    errorMessage.style.display = 'none';
+  })
+
 });
