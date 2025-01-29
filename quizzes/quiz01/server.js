@@ -8,13 +8,10 @@
 //           The server script is started by the manager script as a child process and communicates with the 
 //           manager script through console logs process through a function with a special tag '[TO_MANAGER]'.
 
-
-
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const bodyParser = require('body-parser');
-// const readline = require('readline');
 
 const app = express();
 const port = 3000;
