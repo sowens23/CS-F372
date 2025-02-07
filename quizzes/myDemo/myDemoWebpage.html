@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Demo Webpage</title>
+  <script src="myDemoServer.js"></script>
+</head>
+<body>
+  <form id="myForm">
+    <label for="textBox">Enter text:</label>
+    <input type="text" id="textBox" name="textBox">
+    <button type="submit">Submit</button>
+  </form>
+  <button id="displayButton">Display</button>
+
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Add your form submission logic here
+    });
+
+    document.getElementById('displayButton').addEventListener('click', function() {
+      // Add your display button logic here
+    });
+  </script>
+</body>
+</html>
