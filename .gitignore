@@ -1,15 +1,3 @@
-# Ignore everything
-*
-
-# Do not ignore .gitignore itself
-!.gitignore
-
-# Allow folder traversal
-!*/
-
-# Un-ignore the public folder and all its contents
-!quizzes/
-!quizzes/quizo1
-!quizzes/quiz01/server.js
-!quizzes/quiz01/public/
-!quizzes/quiz01/public/**
+# Ignore
+node_modules/
+*.json

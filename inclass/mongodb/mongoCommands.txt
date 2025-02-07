@@ -1,0 +1,104 @@
+Create database:
+use dbDemo2
+
+Show current database:
+db 
+
+Create user:
+db.createUser({
+  user: "alice", 
+  pwd: "alice123", 
+  roles:["readWrite", "dbAdmin"]
+});
+
+Create collection:
+db.createCollection("customers")
+
+Show all the collection in current database
+show collections
+
+Insert data into a collection:
+db.customers.insert({
+  fName: "Alice", 
+  lName: "Bose"
+});
+
+Insert multiple data into a collection:
+db.customers.insert([
+  {
+    fName: "Alice", 
+    lName: "Bose"
+  },
+  {
+    fName: "Bob",
+    lName: "Chan"
+  },
+  {
+    fName: "Charles",
+    lName: "Dickens"
+  }
+]);
+
+Insert a record with different columns
+db.customers.insert([
+  {
+    fName: "Alice",
+    lName: "Bose"
+  },
+  {
+    fName: "Bob",
+    lName: "Chan"
+  },
+  {
+    fName: "Charles",
+    lName: "Dickens",
+    gender: "Male"
+  }
+]);
+
+Delete the first record where the query (e.g., fName is Alice) is succesful
+db.customers.deleteOne({fName: "Alice"});
+
+Delete all the record where the query (e.g., fName is Alice) is succesful
+db.customers.deleteMany({fName: "Alice"});
+
+Delete all records of a collection
+db.customers.deleteMany({})
+
+UpdateOne a record:
+db.customers.updateOne({fName: "Alice"}, {fName: "Alice", lName: "Ali", gender: "Male"})
+It deletes the record and then insert a new record. That is, if you miss any information (e.g. lName) in the second parameter it will remove it.
+db.customers.updateOne({fName: "Alice"}, {fName: "Alice", gender: "Female"})
+
+To keep the existing attributes as it is and then add an extra field:
+db.customers.updateOne({fName: "Alice"}, {$set: {lName: "Stephens"}})
+
+Add a numeric field:
+db.customers.updateOne({fName: "Alice"}, {$set: {age: 50}}) 
+
+Increment a numeric field:
+db.customers.updateOne({fName: "Alice"}, {$inc: {age: 5}})
+
+Remove a field:
+db.customers.updateOne({fName: "Alice"}, {$unset: {age: 1}})
+
+db.customers.updateOne({fName: "Mary"}, {fName: "Mary", lName: "Ali", gender: "female"}, {upsert:true})
+
+Bulk upload from a CSV:
+mongoimport -d dbDemo2 -c customers --type csv --file customerData.csv --headerline
+
+Drop a collection:
+db.customers.drop()
+
+Create a collection and then add an index
+db.customers.createIndex({"fName": 1, lName: 1}, {unique:true})
+
+Find a record that satisfies the query:
+db.customers.find({fName: "Diana"})
+
+Find a record that satisfies the regex
+db.customers.find({fName:{$in: [/^D/i]}})
+
+
+
+
