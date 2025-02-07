@@ -1,28 +1,29 @@
+<!-- Name: Spencer Bayinsger -->
+<!-- Date: 2025-02-06 -->
+<!-- Filename: myDemoHTML.js -->
+<!-- Purpose: Primary website html page -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Demo Webpage</title>
-  <script src="myDemoServer.js"></script>
 </head>
 <body>
-  <form id="myForm">
-    <label for="textBox">Enter text:</label>
-    <input type="text" id="textBox" name="textBox">
+  <h1>My Demo Webpage</h1>
+
+  <form id="myForm" action="/submit" method="post">
+    <label for="fname">Enter fname:</label>
+    <input type="text" id="fname" name="text" required>
     <button type="submit">Submit</button>
   </form>
-  <button id="displayButton">Display</button>
 
-  <script>
-    document.getElementById('myForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      // Add your form submission logic here
-    });
+  <button id="displayButton">Display Names</button>
 
-    document.getElementById('displayButton').addEventListener('click', function() {
-      // Add your display button logic here
-    });
-  </script>
+  <!-- An empty container to show the list of names -->
+  <ul id="namesList"></ul>
+
+  <!-- Link to the external client-side JS -->
+  <script src="myDemoClient.js"></script>
 </body>
 </html>
