@@ -11,7 +11,7 @@
 ### Class Repositories
   - [sowens23-GitHub](https://github.com/sowens23)
   - [GitHubPortal](https://github.com/sowens23/Newbie-Gains/blob/main/README.md)
-  - [CS-F372 Class Homepage](https://canvas.alaska.edu/courses/23575/modules)
+  - [CS-F372 Class Homepage](https://canvas.alaska.edu/courses/23584)
   - [CS-F372 Final Group Project Repository ](https://github.com/sowens23/CS-F372-Final)
 
 ### References
@@ -27,12 +27,14 @@
 ### Class Assignments
 | Assignment | Repo | Deliverable 1 | Deliverable 1 |
 | --- | --- | --- |
-| Lab01: Shell Script | Lab01 |  |
-| Lab02: Process and Signal Handling |  |  |
-| Lab03: Simple Chat Server |  |  |
-| Lab04: File System and Basic System Admin |  |  |
-| Final: Create a Shell |  |  |
+| Project01: Requirement gathering and feasibility analysis | |  |
+| Project02: Design and implementation | |  |
+| Project03: Testing and maintenance | |  |
+| Project04: Documentation and Reporting | |  |
+| Final: Deliver Complete Product | [Final Project Github (UMovie)](https://github.com/sowens23/CS-F372-Final) | UMovie Management Doc |
 
+# Final Project Demo Video
+[Watch the video](https://youtu.be/rvPUPhgZjw8)
 
 ### Class Notes
 - Front End (Client) has a few layers
