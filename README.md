@@ -25,12 +25,12 @@
   - 137.229.25.190 CS Server Address
 
 ### Class Assignments
-| Assignment | Repo | Deliverable 1 | Deliverable 1 |
+| Assignment | Repo | Deliverable 1 |
 | --- | --- | --- |
-| Project01: Requirement gathering and feasibility analysis | |  |
-| Project02: Design and implementation | |  |
-| Project03: Testing and maintenance | |  |
-| Project04: Documentation and Reporting | |  |
+| Project01: Requirement gathering and feasibility analysis | | |
+| Project02: Design and implementation | | |
+| Project03: Testing and maintenance | | |
+| Project04: Documentation and Reporting | | |
 | Final: Deliver Complete Product | [Final Project Github (UMovie)](https://github.com/sowens23/CS-F372-Final) | UMovie Management Doc |
 
 ### Final Project Demo Video
